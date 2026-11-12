@@ -1,0 +1,79 @@
+{
+  "kind": "weighted-hierarchy",
+  "nodes": [
+    "leaf",
+    "left",
+    "right",
+    "rootA",
+    "rootB",
+    "unrelated",
+    "leaf"
+  ],
+  "edges": [
+    {
+      "child": "leaf",
+      "parent": "left",
+      "weight": "1/2"
+    },
+    {
+      "child": "leaf",
+      "parent": "right",
+      "weight": "1/2"
+    },
+    {
+      "child": "left",
+      "parent": "rootA",
+      "weight": "1"
+    },
+    {
+      "child": "right",
+      "parent": "rootA",
+      "weight": "1/2"
+    },
+    {
+      "child": "right",
+      "parent": "rootB",
+      "weight": "1/2"
+    }
+  ],
+  "version": "hv1",
+  "facts": [
+    {
+      "fact_id": "f1",
+      "node": "leaf",
+      "value": 100,
+      "hierarchy_version": "hv1"
+    },
+    {
+      "fact_id": "f2",
+      "node": "leaf",
+      "value": -20,
+      "hierarchy_version": "hv1"
+    },
+    {
+      "fact_id": "f3",
+      "node": "leaf",
+      "value": null,
+      "hierarchy_version": "hv1"
+    }
+  ],
+  "new_edge_weights": [
+    {
+      "child": "right",
+      "parent": "rootA",
+      "weight": "1/4"
+    },
+    {
+      "child": "right",
+      "parent": "rootB",
+      "weight": "3/4"
+    }
+  ],
+  "rebind_fact_ids": [
+    "f1"
+  ],
+  "selected_rollup_nodes": [
+    "rootA",
+    "rootB"
+  ]
+}
